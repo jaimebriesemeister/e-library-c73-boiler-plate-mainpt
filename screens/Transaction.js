@@ -77,7 +77,7 @@ export default class TransactionScreen extends Component {
       this.setState({ bookId: "", studentId: "" });
       // Apenas para usuários do AndroidFor Android users only
       // ToastAndroid.show("O livro não existe no banco de dados da biblioteca!", ToastAndroid.SHORT);
-      Alert.alert("The book doesn't exist in the library database!");
+      Alert.alert("O livro não existe no banco de dados da biblioteca!");
     } else if (transactionType === "issue") {
       var isEligible = await this.checkStudentEligibilityForBookIssue(
         studentId
@@ -89,7 +89,7 @@ export default class TransactionScreen extends Component {
       }
       // Apenas para usuários do Android
       // ToastAndroid.show("Livro entregue ao aluno!", ToastAndroid.SHORT);
-      Alert.alert("Book issued to the student!");
+      Alert.alert("Livro entregue ao alunot!");
     } else {
       var isEligible = await this.checkStudentEligibilityForBookReturn(
         bookId,
@@ -102,7 +102,7 @@ export default class TransactionScreen extends Component {
       }
       // Apenas para usuários do Android
       // ToastAndroid.show("Livro devolvido à biblioteca!", ToastAndroid.SHORT);
-      Alert.alert("Book returned to the library!");
+      Alert.alert("Livro devolvido à bibliotecay!");
     }
   };
 
@@ -252,7 +252,7 @@ export default class TransactionScreen extends Component {
                 style={styles.scanbutton}
                 onPress={() => this.getCameraPermissions("bookId")}
               >
-                <Text style={styles.scanbuttonText}>Digitalizasr</Text>
+                <Text style={styles.scanbuttonText}>Digitalizar</Text>
               </TouchableOpacity>
             </View>
             <View style={[styles.textinputContainer, { marginTop: 25 }]}>
@@ -267,7 +267,7 @@ export default class TransactionScreen extends Component {
                 style={styles.scanbutton}
                 onPress={() => this.getCameraPermissions("studentId")}
               >
-                <Text style={styles.scanbuttonText}>Digitalizasr</Text>
+                <Text style={styles.scanbuttonText}>Digitalizar</Text>
               </TouchableOpacity>
             </View>
             <TouchableOpacity
